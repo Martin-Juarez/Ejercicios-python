@@ -1,0 +1,18 @@
+lista=[]
+indice=0
+continuar = True
+repetidos = False
+decidir="si"
+while continuar == True:
+  if decidir =="no":
+    continuar = False
+  else:  
+   nombre =input("Ingresa un valor a la lista: ")
+   lista.append(nombre)
+   decidir=input("Desea ingresar un nombre? ")
+print("Se ingresaron:",len(lista), "nombres")
+
+print("vector:", lista )
+print("set:", set(lista))
+print("tupla:",tuple(lista))
+    
