@@ -1,7 +1,14 @@
-num = int (input('Ingresa un número: '))
-mod = num % 2 
-
-if mod == 0:
-    print("El número es par")
-else:
-    print("El número es impar")
+entrada="si"
+while entrada=="si":
+    num = int (input('Ingresa un número: '))
+    if isinstance(num,int):
+        mod = num % 2 
+        if mod == 0:
+            print("El número es par")
+        else:
+            print("El número es impar")
+    else:
+        print("Por favor ingresa un valor entero")
+    entrada= input(print("Quieres ingresar un nuevo valor? si/no "))
+    if entrada == "no":
+        print("Gracias")
