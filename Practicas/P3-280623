@@ -1,0 +1,11 @@
+num1=float(input("porfavor ingresa el primer numero: "))
+num2=float(input("porfavor ingresa el segundo numero: "))
+num3=float(input("porfavor ingresa el tercer numero: "))
+
+if num1 == num2:
+    if num1 == num3:
+        resultado= (num1+num2+num3)*3
+        print("tus numeros son iguales la suma total es: ",resultado/3,"multiplicado por 3 es: ",resultado)
+else:
+    resultado= num1+num2+num3
+    print("la suma total es: ",resultado)
