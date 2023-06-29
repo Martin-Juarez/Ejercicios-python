@@ -1,0 +1,7 @@
+num=int(input(("Ingresa un numero: ")))
+resultado= num-17
+if resultado >= 17:
+    resultado=resultado*2
+    print("El resultado es",resultado/2, "y es mayor por lo tanto se multiplica por 2 y queda en ",resultado)
+else:
+    print("resultado es",resultado)
