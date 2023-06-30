@@ -1,0 +1,7 @@
+lista=["a","e","i","o","o"]
+letra=input("Porfavor ingresa una letra ")
+
+if letra in lista:
+    print("tu letra es una vocal")
+else:
+    print("tu letra no es una vocal")
