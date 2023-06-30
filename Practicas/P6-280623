@@ -1,0 +1,13 @@
+lista=[]
+continuar = True
+while continuar:
+    nombre=input("Por favor ingresa un nombre a tu lista: ")
+    if nombre =="":
+        continuar = False
+    else:  
+        lista.append(nombre)
+nombre2=input("Por favor ingresa un nombre a comparar: ")
+if nombre2 in lista:
+    print("El nombre:",nombre2,"se encuentra repetido en",lista)
+else:
+    print("El nombre:",nombre2,"No se encuentra repetido en",lista)
