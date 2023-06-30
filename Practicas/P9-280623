@@ -1,0 +1,13 @@
+texto = input("Ingrese un string: ")
+
+tiene_numeros = False
+
+for caracter in texto:
+    if caracter.isdigit():
+        tiene_numeros = True
+        break
+
+if tiene_numeros:
+    print("El string contiene números.")
+else:
+    print("El string no contiene números.")
