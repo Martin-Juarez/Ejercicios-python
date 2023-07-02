@@ -43,7 +43,8 @@ while operations == True:
       rest=second.count("-")
       divide=second.count("/")
       multiply=second.count("*")
-      second=int(replace_char(second,"","+","-","/","*"))
+      equal=second.count("=")
+      second=int(replace_char(second,"","+","-","/","*","="))
       if plus>0:
         result=Plus(first,second)
         print(result)
@@ -60,7 +61,8 @@ while operations == True:
         result=Multiply(first,second)
         print(result)
         first=result
-
+      elif equal>0:
+        print("el resultado final es ",result)
 
 
     
