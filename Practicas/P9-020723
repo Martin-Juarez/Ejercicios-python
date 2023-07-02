@@ -1,0 +1,19 @@
+# Escribe un programa tipo "Caja registradora", que permita introducir una lista de artículos, cantidad y precio. 
+# Al final debe mostrarle al usuario la cantidad de artículos y la cantidad a cobrar
+total_items = 0
+price = 0.0
+
+while True:
+    item = input("Please enter the name of the item or 'q' to exit: ")
+    if item == "q":
+        break
+    quantity = int(input("Please enter the quantity of '{}' sold:".format(item)))
+    unit_price = float(input("Please enter the unit price of '{}' :".format(item)))
+    total_items += quantity
+    price += quantity * unit_price
+print(" El resumen de la venta es:")
+print("<---------------------------->")
+print("Total items sold:",total_items)
+print("Total to pay '{}' :".format(price))
+
+
