@@ -1,0 +1,91 @@
+# 1 Escribe una función qué reciba varios números y devuelva el mayor de ellos
+
+def Returns(*args):
+    """Returns
+    Args:
+        args = n quantity of data
+    Returns:
+        Returns the largest number
+    """
+    mayor=max(args)
+    return mayor
+
+# 2 Escribe una función que permita multiplicar varios números
+
+def multiply_numbers(*args):
+    """multiply_numbers
+    Args:
+        args = n quantity of data
+    Returns:
+        multiplies all the numbers entered in the list
+    """
+    result=0
+    for i in args:
+        result *= i
+    return result
+
+
+# 3 Escribe una función para verificar que un número se encuentra en un rango de números determinado. El resultado de esa función debe ser booleano
+
+def verify(num):
+    """_summary_
+
+    Args:
+        num = number to evaluate
+    Returns:
+        if the number is inside of the range it will return a true, if not the output will be false
+    """
+    n=False
+    if num in range(1,50):
+        n=True
+    return n
+
+# 4 Escribe una función que permita identificar si un número dado es primo o no
+
+def validation(num):
+    """_summary_
+
+    Args:
+        num = number to evaluate
+    Returns:
+        if the number to evaliate is prime or not
+    """
+    if num%2 == 0:
+        print("El numero",num,"es un numero primo")
+    else:
+        print("El numero",num,"no es un numero primo")
+
+# 5 Escribe un programa que pueda identificar si una palabra o frase es un palíndromo
+
+def palindrome(string):
+    """_summary_
+
+    Args:
+        string = string to evaluate
+    Returns:
+        type: boolean if true or false
+    """
+    inicio = 0
+    fin = len(string) - 1
+    while string[inicio] == string[fin]:
+        if inicio >= fin:
+            return True
+        inicio += 1
+        fin -= 1
+    return False
+
+# 6 Escribe una función que genere una lista con los números de la serie de fibonacci. La función debe recibir la cantidad de números a generar
+
+def fibonacci(num):
+
+    d1 = 0
+    d2 = 1
+    print(d1)
+    print(d2)
+    for x in range (2, num):
+        nuevo = d1 + d2
+        d1 = d2
+        d2 = nuevo
+        print(nuevo)
+
+
