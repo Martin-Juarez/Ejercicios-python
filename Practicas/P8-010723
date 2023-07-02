@@ -1,0 +1,70 @@
+# Calculator
+
+import os
+
+def clearscreen():           # Function to clear screen.
+  if os.name == "posix":
+    os.system ("clear")
+
+def Plus(first,second):      # Function to sum
+  return first+second
+
+def Rest(first,second):      # Function to rest.
+  return first-second
+
+def Multiply(first,second):  # Function to multiply
+  return first*second
+
+def Divide(first,second):    # Function to divide
+  return first/second
+
+def replace_char(text, new, *old):  # Function to remove special character and replaced for blanc space
+    for caracter in old:
+        text = text.replace(caracter, new)       
+    return text
+
+operations=True
+flag=0
+print(""" 👹 Calculator 👹
+________________
+""")
+while operations == True:
+  if flag == 0:
+    first=float(input(": "))
+    print(first)
+    flag+=1
+  elif flag>0:
+    second=input(": ")
+    if second=="":
+      operations=False
+      clearscreen()
+    else:
+      plus=second.count("+")        # Count functions search the character between ""
+      rest=second.count("-")
+      divide=second.count("/")
+      multiply=second.count("*")
+      second=int(replace_char(second,"","+","-","/","*"))
+      if plus>0:
+        result=Plus(first,second)
+        print(result)
+        first=result
+      elif rest>0:
+        result=Rest(first,second)
+        print(result)
+        first=result
+      elif divide>0:
+        result=Divide(first,second)
+        print(result)
+        firts=result
+      elif multiply>0:
+        result=Multiply(first,second)
+        print(result)
+        first=result
+
+
+
+    
+
+
+
+ 
